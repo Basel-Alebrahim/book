@@ -40,7 +40,7 @@ In systems analysis, a one-to-many relationship is a type of cardinality that re
 | 2  | Book B  |     2     |
 | 3  | Book C  |     2     |
 
-## Git Library Project online
+## Get Library Project online
 1. Use [DigitalOcean](https://www.digitalocean.com/) as a Virtual Private Server
 2. Use [forge.laravel.com](https://forge.laravel.com) to deploy our Project to my DigitalOcean 
 3. Connect [Github Repository](https://github.com/Basel-Alebrahim/book.git) to Laravel Forge
