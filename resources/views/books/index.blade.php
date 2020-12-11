@@ -40,9 +40,12 @@
 
         <div class="col-sm-2">
             <input type="submit" class="form-control btn btn-primary" value="Search">
-
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="offset-sm-8 col-sm-2">
             @if (Request::query('book_title_search') || Request::query('author_name_search'))
-                <a class="btn btn-success" href="{{ route('books.all')}}">Clear</a>
+                <a class="btn btn-success form-control" href="{{ route('books.all')}}">Clear</a>
             @endif
         </div>
     </div>
