@@ -11,7 +11,7 @@
     }
 </style>
 
-<div class="accordion" id="accordionExample">
+
     <h1><span class="badge badge-info">Authors List</span></h1>
     <br>
 
@@ -38,25 +38,23 @@
             <a href="{{url('authors/create/')}}" class="btn btn-success ">Add New Author</a>
         </div>
     </div>
-    @forelse ($authors as $author)
-    <div class="card">
-        <div class="card-header" id="headingOne">
-            <div class="d-flex justify-content-between align-items-center">
+    <div class="accordion" id="accordionExample">
+        @forelse ($authors as $author)
+        <div class="card">
+            <div class="card-header">
+                <div class="d-flex justify-content-between align-items-center">
 
-                <div class="col-sm-1">
-                    <a data-toggle="collapse" href="#{{$author->name}}" aria-expanded="true" aria-controls="collapse-example" id="{{$author->name}}" class="d-block">
-                        <i class="fa fa-chevron-down pull-left"></i>
-                    </a>
-                </div>
-                <div class="col-sm-8">
-                    {{$author->name}}
-                </div>
-                <div class="col-sm-3">
-                    <a href="{{url('authors/edit/'.$author->id)}}" class="btn btn-warning d-inline-block mr-4">Edit</a>
-                    <a href="{{route('authors.delete', $author->id)}}" class="btn btn-danger d-inline-block mr-4">Delete</a>
+                    <div class="col-sm-9">
+                        <button type="button" class="btn " data-toggle="collapse" data-target="#_{{$author->id}}">
+                            <i class="fa fa-angle-right"></i> {{$author->name}}</button>
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="{{url('authors/edit/'.$author->id)}}" class="btn btn-warning d-inline-block mr-4">Edit</a>
+                        <a href="{{route('authors.delete', $author->id)}}" class="btn btn-danger d-inline-block mr-4">Delete</a>
+                    </div>
                 </div>
             </div>
-            <div id="{{$author->name}}" class="panel-collapse collapse" aria-labelledby="{{$author->name}}" data-parent="#accordionExample">
+            <div id="_{{$author->id}}" class="panel-collapse collapse"  data-parent="#accordionExample">
                 <div class="card-body">
                     <div class="panel-title pl-3 alert alert-dark">Book Title</div>
                     <ul class="list-group">
@@ -68,15 +66,14 @@
                     </ul>
                 </div>
             </div>
+
+        </div>
+        @empty
+            <p colspan="4">No authors found</p>
+        @endforelse
+
+        <div class="d-flex justify-content-center mt-5">
+            {!!  $authors -> links() !!}
         </div>
     </div>
-    @empty
-        <p colspan="4">No authors found</p>
-    @endforelse
-
-    <div class="d-flex justify-content-center mt-5">
-        {!!  $authors -> links() !!}
-    </div>
-</div>
-
 @endsection
