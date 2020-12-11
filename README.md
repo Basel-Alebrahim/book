@@ -43,5 +43,5 @@ In systems analysis, a one-to-many relationship is a type of cardinality that re
 ## Get Library Project online
 1. Use [DigitalOcean](https://www.digitalocean.com/) as a Virtual Private Server
 2. Use [forge.laravel.com](https://forge.laravel.com) to deploy our Project to my DigitalOcean 
-3. Connect [Github Repository](https://github.com/Basel-Alebrahim/book.git) to Laravel Forge
+3. Connect [Github Repository](https://github.com/Basel-Alebrahim/library.git) to Laravel Forge
 4. Point the Domain to the [DigitalOcean](https://www.digitalocean.com/) Server with [GoDaddy](https://godaddy.com/)
