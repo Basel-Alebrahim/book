@@ -25,7 +25,7 @@ Here is a list of some features of Library Management System which our system of
 In systems analysis, a one-to-many relationship is a type of cardinality that refers to the relationship between two entities. In our application, we considered this type of relationship. In other words, a list of authors and their books describe books with only one author, in which case one row of the books table will refer to only one row of the authors table.
 
 # ERD Diagram:
-![alt text](public/db.png "Title Text")
+![alt text](public/db_diagram.png "Database ERD Diagram")
 
 # Authors Table
 | ID | Name       |
