@@ -96,8 +96,9 @@
             @endforelse
     </tbody>
 </table>
+
 <div class="d-flex justify-content-center">
-    {!!  $books -> links() !!}
+    {!! $books->appends(\Request::except('page'))->render() !!}
 </div>
 
 @endsection
